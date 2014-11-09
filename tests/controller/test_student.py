@@ -26,6 +26,10 @@ class TestStudent(TestCase):
         assert '{"abc123": "bob"}' == response.data
 
     def test_student_delete(self):
+        '''
+        Tests the delete method
+        '''
+
         response = self.app.put("/students/abc123", data={"data":"bob"})
         assert '{"abc123": "bob"}' == response.data
         response = self.app.delete("/students/abc123")

@@ -12,6 +12,10 @@ from student_mgmt import app, api
 students = {}
 
 class Student(Resource):
+    '''
+    Is a RESTful controller to model a student resource
+    '''
+    
     def get(self, student_id):
         return {student_id: students[student_id]}
 
